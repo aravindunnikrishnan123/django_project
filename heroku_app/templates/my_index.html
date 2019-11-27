@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <head>
+    </head>
+    <body>
+        <center>
+            <script>
+                function previewImage(e) {
+                    console.log(e.target.files);
+                    document.getElementById('setimage').src   
+                        = URL.createObjectURL(e.target.files[0]);
+                    
+                }
+            </script>
+        <form action="/heroku_app/saveuser/" method="POST">
+            {% csrf_token %}
+            <div>
+                <img src="{% static 'flower1.jpeg' %}" width="150" id="setimage">
+                <input id="imgFile" onchange="previewImage(event);" type="file" hidden>
+                <label for="imgFile">
+                    update your Image
+                </label>
+                <br><br>
+                <input type="submit" value="submit">
+           </div>
+       </form>
+
+       </center>
+    </body>
+</html>

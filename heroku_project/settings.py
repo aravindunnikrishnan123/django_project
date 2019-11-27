@@ -25,7 +25,7 @@ SECRET_KEY = 'x8qke1+r%*bzn@&-ek&*2zwg(j=(b3pqzkvh@6o(t7w4!&i(z3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-herokuapp.herokuapp.com']
+ALLOWED_HOSTS = ['django-herokuapp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -132,3 +132,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

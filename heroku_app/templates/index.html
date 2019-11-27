@@ -1,11 +1,45 @@
-{% load static %}
 <html>
     <head>
+        <style>
 
+          .side-div{
+              background-color:silver;
+              width: 212px;
+              float: left;
+              height: 100%;
+          }
+          .side-div a{
+              display: block;
+              padding: 12px 12px;
+          }
+         
+          #center{
+              width: 70%;
+              height: 100%;
+              float: left;
+              margin-left: 20px;
+          }
+          #block-element{
+              margin: 16% 40%;
+          }
+        </style>
     </head>
     <body>
-       <center>
-        <img src="{% static 'IMG_20170803_212538.JPG' %}" width="500">
-       </center>
+       
+            <div  class="side-div">
+                
+                    <div>
+                        <a href="">Click here for login</a>
+                        <a href="">Create an account</a>
+                    
+            <div  id="center">
+                
+                <div id="block-element">
+                   
+                </div>
+            </div>
+            <div class="side-div">
+
+            </div>
     </body>
 </html>
