@@ -18,8 +18,7 @@ def fn_userLogin(request):
             return HttpResponse('incorrect password')
         except Exception as e:
             print(e)
-            return HttpResponse('incorrect username')
-            
+            return HttpResponse('incorrect username')       
     return render(request,'login.html')
 
 def fn_saveUser(request):

@@ -5,5 +5,5 @@ urlpatterns = [
     path('',views.fn_myIndex),
     path('userlogin/',views.fn_userLogin),
     path('saveuserdata/',views.fn_saveUser),
-    path('changepassword/',views.fn_updateUserPassword)
+    # path('changepassword/',views.fn_updateUserPassword)
 ]

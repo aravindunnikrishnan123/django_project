@@ -27,15 +27,23 @@
     <body>
        
             <div  class="side-div">
-                
+                {{message}}
+                {% if msg %}
                     <div>
                         <a href="/heroku/userlogin">Click here for login</a>
-                        <a href="/heroku/sveuserdata">Create an account</a>
+                        <a href="/heroku/saveuserdata">Create an account</a>
+                    </div>
                     
+                {% else %}
+                     <a href="/heroku/changepassword">Change Password</a>
+                {% endif %}
+            </div>
             <div  id="center">
                 
                 <div id="block-element">
-                   
+                    {% block content %}
+                
+                {% endblock %}
                 </div>
             </div>
             <div class="side-div">
