@@ -10,6 +10,8 @@ def fn_myIndex(request):
 def fn_userLogin(request):
     if request.method == 'POST':
         try:
+            username = request.POST['uname']
+            password = request.POST['pass']
             login_obj = Login.objects.get(username=username)
             if login_obj.password == password:
                 return render(request,'index.html')
