@@ -9,15 +9,12 @@ def fn_myIndex(request):
 
 def fn_userLogin(request):
     if request.method == 'POST':
-        print(request.POST)
-        print(request.POST['uname'])
         try:
             login_obj = Login.objects.get(username=username)
             if login_obj.password == password:
                 return render(request,'index.html')
             return HttpResponse('incorrect password')
         except Exception as e:
-            print(e)
             return HttpResponse('incorrect username')       
     return render(request,'login.html')
 
@@ -29,7 +26,6 @@ def fn_saveUser(request):
             login_exist  = Login.objects.filter(username=uname).exists()
 
             if login_exist == False:
-                print(request.POST)
                 fname    = request.POST['fname']
                 lname    = request.POST['lname']
                 password = request.POST['pass']
@@ -48,6 +44,5 @@ def fn_saveUser(request):
             else:
                 return HttpResponse('Username already exist')
         except Exception as e:
-            print(e)
             return HttpResponse('invalid')    
     return render(request,'register.html')
