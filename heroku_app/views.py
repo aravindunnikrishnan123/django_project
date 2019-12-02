@@ -12,7 +12,7 @@ def fn_userLogin(request):
         try:
             username = request.POST['uname']
             password = request.POST['pass']
-            login_obj = Login.objects.get(username=username)
+            login_obj = Login.objects.get(username='aravind1234')
             if login_obj.password == password:
                 return render(request,'index.html')
             return HttpResponse('incorrect password')

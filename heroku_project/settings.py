@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'heroku_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'de2o5hifru9ahv',
-        # 'USER':'dzcxvdxubwtnph',
-        # 'PASSWORD':'7073b43f1f99bfdaf7f6cca2bd15e35e5f6e552ca99d8f1633a24ce43c0fdc6e',
-        # 'HOST':'ec2-54-227-249-202.compute-1.amazonaws.com',
-        # 'PORT':'5432'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'de2o5hifru9ahv',
+        'USER':'dzcxvdxubwtnph',
+        'PASSWORD':'7073b43f1f99bfdaf7f6cca2bd15e35e5f6e552ca99d8f1633a24ce43c0fdc6e',
+        'HOST':'ec2-54-227-249-202.compute-1.amazonaws.com',
+        'PORT':'5432'
 
         ########## localhost #########
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_db',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost'  
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'heroku_db',
+        # 'USER':'root',
+        # 'PASSWORD':'',
+        # 'HOST':'localhost'  
     }
 }
 
