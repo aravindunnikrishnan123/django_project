@@ -27,7 +27,7 @@ def fn_saveUser(request):
 
             login_exist  = Login.objects.filter(username=uname).exists()
 
-            if login_exist == False:
+            if not login_exist:
                 fname    = request.POST['fname']
                 lname    = request.POST['lname']
                 password = request.POST['pass']
@@ -36,13 +36,12 @@ def fn_saveUser(request):
                 
                 login_obj = Login(username=uname,password=password)
                 login_obj.save()
-
-                if login_obj.id > 0:
+                if login_obj.id:
                     user_obj = UserDetails(first_name=fname,last_name=lname,gender=gender,
                                 dob=dob,fk_login=login_obj)
                     user_obj.save()
-                if user_obj.id > 0:
-                    return HttpResponse('User Registered successfully')
+                    if user_obj.id:
+                        return HttpResponse('User Registered successfully')
             else:
                 return HttpResponse('Username already exist')
         except Exception as e:
